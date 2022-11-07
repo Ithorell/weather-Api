@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <link rel="stylesheet" href="./develop/reset.css">
+    <link rel="stylesheet" href="./develop/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <title>Weather dash</title>
+</head>
+
+<body>
+  
+  <header>
+   <h1>Weather Dashboard</h1>
+  </header>
+
+  <main>
+    <aside>
+      <form>
+        <label>City Search</label>
+        <input type="text" id="search" placeholder="Enter City">
+        <button type="submit" id="searchBtn" value="Submit">Search</button>
+      </form>
+      <div id="searchHistory">
+        <h2>Search History</h2>
+        <ul id="historyList">
+        </ul>  
+      </div>
+    </aside>
+    <div>
+    <div class="todaysWeather">
+      <h2 id="cityName"></h2>
+      <p id="date"></p>
+      <p id="temp"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+    </div>
+    <h3>5 day Forcast</h3>
+    <div id="forcast">
+      <figure>
+        <h3 id="date">Date:</h3>
+        <p id="temp">Temp:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </figure>
+      <figure>
+        <h3 id="date">Date:</h3>
+        <p id="temp">Temp:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </figure>
+      <figure>
+        <h3 id="date">Date:</h3>
+        <p id="temp">Temp:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </figure>
+      <figure>
+        <h3 id="date">Date:</h3>
+        <p id="temp">Temp:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </figure>
+      <figure>
+        <h3 id="date">Date:</h3>
+        <p id="temp">Temp:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </figure>
+
+    </div>
+  </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./develop/script.js"></script>
+</body>
+
+
+
+</html>
