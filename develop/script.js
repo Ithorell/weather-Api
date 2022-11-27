@@ -35,12 +35,8 @@ function apiCall (city) {
         fetch(getWeather(lat, lon))
         .then (response => response.json())
         .then (data =>{
-            renderForcast(data);
+            renderCurrentWeather(data);
         }); });
-};
-
-function renderForcast (data) {
-    console.log(data);
 };
 
 // Function to render search history
@@ -94,33 +90,6 @@ function renderCurrentWeather() {
     }
 };
 
-// Function to render 5 day forecast
-// function renderForecast() {
-//     forecastEl.innerHTML = "";
-
-//     for (var i = 7; i < data.daily.length; i+= 8) {
-//         let day = data.list[i];
-
-//         let figure = document.createElement("figure");
-//         let date = document.createElement("h3");
-//         let temp = document.createElement("p");
-//         let humidity = document.createElement("p");
-//         let wind = document.createElement("p");
-
-//         date.textContent = moment.unix(day.dt).format("MM Do, YYYY");
-//         temp.textContent = `Temp: ${day.main.temp} °F`;
-//         humidity.textContent = `Humidity: ${day.main.humidity}%`;
-//         wind.textContent = `Wind Speed: ${day.wind.speed} MPH`;
-
-//         forecastEl.appendChild(figure);
-//         figure.appendChild(date);
-//         figure.appendChild(temp);
-//         figure.appendChild(humidity);
-//         figure.appendChild(wind);
-//     }
-// };
-
-// search button events
 search_Button.addEventListener("click", function (event) {
     event.preventDefault();
     var searchValue = search_Input.value.trim();
