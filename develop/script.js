@@ -19,7 +19,7 @@ listEl.addEventListener("click", function (event) {
 
 // Functions for Api calls
 function latlonWeather(city){
-    return `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+    return `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 };
 
 function getWeather(lat, lon) {
@@ -50,7 +50,10 @@ function renderSearchHistory() {
 };
 
 // Function to render current weather
-function renderCurrentWeather() {
+function renderCurrentWeather(data) {
+    var today = data.list[0];
+    currentWeatherEl.innerHTML = "";
+
     var cityName = document.createElement("h2");
     var cityTemp = document.createElement("p");
     var cityHumidity = document.createElement("p");
@@ -66,7 +69,7 @@ function renderCurrentWeather() {
     currentWeatherEl.appendChild(cityHumidity);
     currentWeatherEl.appendChild(cityWind);
 
-    forecastEl.innerHTML = "";
+    forecastEl.innerHTML ="";
 
     for (var i = 7; i < data.daily.length; i+= 8) {
         let day = data.list[i];
